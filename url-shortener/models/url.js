@@ -8,15 +8,15 @@ const urlSchema = new mongoose.Schema({
     short_url: {
       type: Number,
       required: true,
-      unique: true, 
+      unique: true,
     },
     createdAt: {
       type: Date,
-      default: Date.now, 
+      default: Date.now,
       index: { expires: '15d' },
     },
   });
-  
+
   const Url = mongoose.model('Url', urlSchema);
 
   module.exports = Url;
